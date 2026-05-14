@@ -1,6 +1,20 @@
 h1{ 
-    margin: 0%; 
+    margin: 0%;
+    font-family: 'Courier New', Courier, monospace;
 } 
+
+img{
+    border: 2px solid white;
+    width: 350px;
+    height: 220px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+img:hover{
+    filter: brightness(70%);
+    transform: scale(1.03);
+}
 
 html{
     overflow-y: scroll;
@@ -30,7 +44,6 @@ body{
     
     background-color: rgb(174, 184, 184); 
     border-radius: 15px; 
-    height: 200%; 
     width: 95%;
     margin: 20px auto;
     border-radius: 15px;
@@ -44,6 +57,7 @@ body{
     font-size: 130%; 
     margin: 0px;
 }
+
 .listagem{
     display: flex; 
     justify-content: left; 
@@ -51,23 +65,25 @@ body{
     color: rgb(255, 255, 255);
 }
 
-.listagem a{
+ul{
+    list-style-type: square;
+}
 
+.listagem a{
     color: white;
     text-decoration: none;
 }
 
 .gremio{ 
     background-color: rgb(79, 133, 133); 
-    border-radius: 15px; 
-    height: 200%; 
+    border-radius: 15px;  
     width: 95%;
     margin: 20px auto;
     box-shadow: 0px 0px 15px rgba(255,255,255,0.15);
 } 
 
 .titl_g{ 
-    color :rgb(0, 242, 255); 
+    color :rgb(0, 0, 0); 
     display: flex; 
     justify-content: center; 
     font-size: 150%; 
@@ -95,12 +111,11 @@ body{
     border-radius: 15px; 
     width: 95%;
     margin: 20px auto; 
-    height: 200%;
     box-shadow: 0px 0px 15px rgba(255,255,255,0.15);
 }
 
 .titl_a{ 
-    color: rgb(250, 1, 1); 
+    color: rgb(0, 0, 0); 
     display: flex; 
     justify-content: center; 
     font-size: 150%; 
@@ -122,24 +137,55 @@ body{
     padding-bottom: 20px;
 } 
 
+.barcelona{
+    background-color: rgb(123, 38, 38); 
+    border-radius: 15px; 
+    width: 95%;
+    margin: 20px auto; 
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.15);
+}
+
+.titl_bar{ 
+    color: rgb(232, 232, 11); 
+    display: flex; 
+    justify-content: center; 
+    font-size: 150%; 
+} 
+
+.hino_bar{ 
+    display: flex; 
+    justify-content: center; 
+    font-size: 28px;
+    line-height: 1.5;
+    padding: 20px;
+    color :rgb(255, 255, 255); 
+} 
+
+.img_bar{ 
+    display: flex; 
+    justify-content: center; 
+    height: 220px;
+    padding-bottom: 20px;
+} 
+
 p{ 
     display: flex; 
     justify-content: center; 
     align-items: center;  
     text-align: center; 
+    text-decoration: underline;
 } 
 
 .brasil{
     background-color: rgb(47, 122, 49); 
     border-radius: 15px; 
-    height: 200%; 
     width: 95%;
     margin: 20px auto;
     box-shadow: 0px 0px 15px rgba(255,255,255,0.15);
 }
 
 .titl_b{ 
-    color :rgb(6, 255, 6); 
+    color :rgb(255, 247, 0); 
     display: flex; 
     justify-content: center; 
     font-size: 150%; 
@@ -224,6 +270,7 @@ p{
 .lista:hover,
 .gremio:hover,
 .paranaense:hover,
+.barcelona:hover,
 .brasil:hover,
 .tabela:hover{
     transform: scale(1.01);
