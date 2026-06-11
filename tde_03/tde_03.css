@@ -1,7 +1,3 @@
-/* ================================
-   BRATZ INSTALAÇÕES ELÉTRICAS
-   Cores: #f3ff51 (amarelo) / #111 (preto)
-   ================================ */
 
 * {
     margin: 0;
@@ -18,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* ---- TOP BAR ---- */
 .top-bar {
     background: #111;
     color: #ccc;
@@ -29,9 +24,6 @@ body {
     gap: 30px;
 }
 
-/* ---- HEADER ----
-   Logo recomendada: 200x80px
-   Troque logo2.jpg pelo seu arquivo */
 header {
     background: #f3ff51;
     padding: 14px 40px;
@@ -80,9 +72,6 @@ nav a.ativo {
     background: #333;
 }
 
-/* ---- BANNER ----
-   Imagem recomendada: 1920x500px
-   Troque banner.jpg pelo seu arquivo */
 .banner {
     background: url('img/banner_resized.jpg') center center no-repeat;
     background-size: 100%;
@@ -130,7 +119,6 @@ nav a.ativo {
     background: #dde900;
 }
 
-/* ---- NÚMEROS (home) ---- */
 .numeros {
     background: #111;
     display: flex;
@@ -151,7 +139,6 @@ nav a.ativo {
     font-size: 13px;
 }
 
-/* ---- SEÇÃO GENÉRICA ---- */
 .secao {
     max-width: 860px;
     margin: 60px auto;
@@ -171,7 +158,6 @@ nav a.ativo {
     margin-bottom: 12px;
 }
 
-/* ---- TÍTULO DE PÁGINA INTERNA ---- */
 .titulo-pagina {
     background: #111;
     text-align: center;
@@ -189,8 +175,6 @@ nav a.ativo {
     font-size: 15px;
 }
 
-/* ---- CARDS ----
-   Para adicionar card: copie o bloco .card no .html */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -231,7 +215,6 @@ nav a.ativo {
     line-height: 1.6;
 }
 
-/* ---- DEPOIMENTOS ---- */
 .depoimentos {
     display: flex;
     flex-wrap: wrap;
@@ -299,7 +282,6 @@ nav a.ativo {
     border-left: 4px solid #f3ff51;
 }
 
-/* ---- VALORES ---- */
 .valores {
     background: #111;
     display: flex;
@@ -335,7 +317,6 @@ nav a.ativo {
     line-height: 1.6;
 }
 
-/* ---- CONTATO ---- */
 .contato {
     display: flex;
     gap: 50px;
@@ -373,7 +354,6 @@ nav a.ativo {
     color: #555;
 }
 
-/* FORMULÁRIO */
 .form-grupo {
     margin-bottom: 14px;
 }
@@ -419,7 +399,6 @@ nav a.ativo {
     background: #333;
 }
 
-/* ---- CTA (chamada pra ação no fim das páginas) ---- */
 .cta {
     text-align: center;
     padding: 60px 20px;
@@ -437,58 +416,10 @@ nav a.ativo {
     margin-bottom: 20px;
 }
 
-/* ---- FOOTER ---- */
 footer {
     background: #f3ff51;
     text-align: center;
     padding: 18px;
     font-size: 13px;
     margin-top: auto;
-}
-
-/* ---- RESPONSIVO ---- */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 14px;
-        padding: 20px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
-    }
-
-    .btn-header { width: 100%; }
-
-    .banner {
-        padding: 40px 20px;
-        min-height: 340px;
-    }
-
-    .banner-box h1 { font-size: 24px; }
-
-    .numeros {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .card { width: 100%; max-width: 320px; }
-
-    .depoimento { width: 100%; }
-
-    .quemsomos {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-
-    .quemsomos img { width: 100%; }
-
-    .contato {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-
-    .valor { width: 100%; max-width: 300px; }
 }
