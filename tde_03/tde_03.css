@@ -1,122 +1,496 @@
-body{
-    margin:0;
-    font-family:sans-serif;
-    background:#f4f4f4;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+/* ================================
+   BRATZ INSTALAÇÕES ELÉTRICAS
+   Cores: #f3ff51 (amarelo) / #111 (preto)
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.top-bar{
-    background:#111;
-    color:white;
-    padding:8px 20px;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    font-size:13px;
-    align-items:center;
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header{
-    background:rgb(243,255,81);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:12px 40px;
+/* ---- TOP BAR ---- */
+.top-bar {
+    background: #111;
+    color: #ccc;
+    font-size: 13px;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-.logo img{
-    height:80px;
-    display:block;
+/* ---- HEADER ----
+   Logo recomendada: 200x80px
+   Troque logo2.jpg pelo seu arquivo */
+header {
+    background: #f3ff51;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav{
-    display:flex;
-    gap:28px;
-    align-items:center;
+.logo img {
+    height: 70px;
 }
 
-nav a{
-    text-decoration:none;
-    color:#111;
-    font-size:13px;
-    font-weight:500;
-    letter-spacing:0.5px;
-    padding-bottom:2px;
-    border-bottom:2px solid transparent;
+nav {
+    display: flex;
+    gap: 24px;
 }
 
-nav a:hover{
-    color:rgb(60,60,10);
-    border-bottom:2px solid rgb(60,60,10);
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
 }
 
-.btn-orcamento{
-    background:#111;
-    color:rgb(243,255,81);
-    border:none;
-    padding:10px 20px;
-    font-size:13px;
-    font-weight:500;
-    cursor:pointer;
-    border-radius:4px;
-    white-space:nowrap;
+nav a:hover,
+nav a.ativo {
+    border-bottom: 2px solid #111;
 }
 
-.btn-orcamento:hover{
-    background:#333;
+.btn-header {
+    background: #111;
+    color: #f3ff51;
+    border: none;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-h1{
-    text-align:center;
-    color:black;
-    margin:10px 0;
-    font-size:32px;
+.btn-header:hover {
+    background: #333;
 }
 
-main{
-    flex:1;
-    padding:50px 20px;
-    text-align:center;
+/* ---- BANNER ----
+   Imagem recomendada: 1920x500px
+   Troque banner.jpg pelo seu arquivo */
+.banner {
+    background: #222 url('banner.jpg') center/cover no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
 }
 
-section{
-    max-width:900px;
-    margin:auto;
+.banner-box {
+    background: rgba(0,0,0,0.65);
+    border-left: 4px solid #f3ff51;
+    padding: 36px 40px;
+    max-width: 540px;
+    border-radius: 6px;
 }
 
-section p{
-    font-size:18px;
-    line-height:1.6;
+.banner-box h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 14px;
+    line-height: 1.3;
 }
 
-footer{
-    background:rgb(243,255,81);
-    color:black;
-    text-align:center;
-    padding:20px;
-    width:100%;
-    box-sizing:border-box;
+.banner-box p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
 }
 
-@media(max-width:768px){
-    header{
-        flex-direction:column;
-        gap:15px;
-        padding:20px;
+.btn-amarelo {
+    background: #f3ff51;
+    color: #111;
+    border: none;
+    padding: 11px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-amarelo:hover {
+    background: #dde900;
+}
+
+/* ---- NÚMEROS (home) ---- */
+.numeros {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 36px 20px;
+    text-align: center;
+}
+
+.numeros strong {
+    display: block;
+    color: #f3ff51;
+    font-size: 32px;
+}
+
+.numeros span {
+    color: #888;
+    font-size: 13px;
+}
+
+/* ---- SEÇÃO GENÉRICA ---- */
+.secao {
+    max-width: 860px;
+    margin: 60px auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.secao h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+.secao p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* ---- TÍTULO DE PÁGINA INTERNA ---- */
+.titulo-pagina {
+    background: #111;
+    text-align: center;
+    padding: 46px 20px;
+}
+
+.titulo-pagina h1 {
+    color: #f3ff51;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.titulo-pagina p {
+    color: #888;
+    font-size: 15px;
+}
+
+/* ---- CARDS ----
+   Para adicionar card: copie o bloco .card no .html */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 30px;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.card {
+    background: #fff;
+    border-top: 4px solid #f3ff51;
+    border-radius: 6px;
+    padding: 28px 22px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card .icone {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ---- DEPOIMENTOS ---- */
+.depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 30px;
+    max-width: 960px;
+    margin: auto;
+}
+
+.depoimento {
+    background: #fff;
+    border-left: 4px solid #f3ff51;
+    border-radius: 6px;
+    padding: 24px 22px;
+    width: 380px;
+    transition: transform 0.2s;
+}
+
+.depoimento:hover {
+    transform: translateY(-4px);
+}
+
+.depoimento .estrelas {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.depoimento p {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.depoimento strong {
+    font-size: 13px;
+}
+
+/* ---- QUEM SOMOS ----
+   Foto da equipe recomendada: 600x400px
+   Troque equipe.jpg pelo seu arquivo */
+.quemsomos {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 0 30px;
+}
+
+.quemsomos-texto h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.quemsomos-texto p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.quemsomos img {
+    width: 400px;
+    border-radius: 6px;
+    border-left: 4px solid #f3ff51;
+}
+
+/* ---- VALORES ---- */
+.valores {
+    background: #111;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 30px;
+}
+
+.valor {
+    background: #1a1a1a;
+    border-top: 4px solid #f3ff51;
+    border-radius: 6px;
+    padding: 26px 22px;
+    width: 240px;
+    text-align: center;
+}
+
+.valor .icone {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.valor h3 {
+    color: #f3ff51;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.valor p {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ---- CONTATO ---- */
+.contato {
+    display: flex;
+    gap: 50px;
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 0 30px;
+    align-items: flex-start;
+}
+
+.contato-info h2,
+.contato-form h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.contato-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.contato-item .icone {
+    font-size: 22px;
+}
+
+.contato-item strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.contato-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* FORMULÁRIO */
+.form-grupo {
+    margin-bottom: 14px;
+}
+
+.form-grupo label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: sans-serif;
+    transition: border-color 0.2s;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: #111;
+}
+
+.btn-enviar {
+    width: 100%;
+    background: #111;
+    color: #f3ff51;
+    border: none;
+    padding: 11px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-enviar:hover {
+    background: #333;
+}
+
+/* ---- CTA (chamada pra ação no fim das páginas) ---- */
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.cta h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    background: #f3ff51;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+/* ---- RESPONSIVO ---- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px;
     }
 
-    nav{
-        flex-direction:column;
-        gap:15px;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
     }
 
-    .btn-orcamento{
-        width:100%;
+    .btn-header { width: 100%; }
+
+    .banner {
+        padding: 40px 20px;
+        min-height: 340px;
     }
 
-    h1{
-        font-size:28px;
+    .banner-box h1 { font-size: 24px; }
+
+    .numeros {
+        flex-direction: column;
+        gap: 24px;
     }
+
+    .card { width: 100%; max-width: 320px; }
+
+    .depoimento { width: 100%; }
+
+    .quemsomos {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .quemsomos img { width: 100%; }
+
+    .contato {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .valor { width: 100%; max-width: 300px; }
 }

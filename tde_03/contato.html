@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tde_03.css">
+    <title>Contato - Bratz Instalações Elétricas</title>
+</head>
+<body>
+
+<div class="top-bar">
+    <span>📧 contato@bratzinstalacoes.com.br</span>
+    <span>📱 (xx) 9 xxxx-xxxx</span>
+    <span>📸 bratzinstalacoes</span>
+</div>
+
+<header>
+    <div class="logo"><img src="logo2.jpg" alt="Logo Bratz"></div>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="servicos.html">SERVIÇOS</a>
+        <a href="depoimentos.html">DEPOIMENTOS</a>
+        <a href="quemsomos.html">QUEM SOMOS</a>
+        <a href="contato.html" class="ativo">CONTATO</a>
+    </nav>
+    <button class="btn-header">Faça um orçamento</button>
+</header>
+
+<div class="titulo-pagina">
+    <h1>Contato</h1>
+    <p>Fale conosco, respondemos rápido!</p>
+</div>
+
+<div class="contato">
+
+    <div class="contato-info">
+        <h2>Informações</h2>
+
+        <!-- ALTERE OS DADOS ABAIXO -->
+        <div class="contato-item">
+            <span class="icone">📧</span>
+            <div>
+                <strong>E-mail</strong>
+                <p>contato@bratzinstalacoes.com.br</p>
+            </div>
+        </div>
+        <div class="contato-item">
+            <span class="icone">📱</span>
+            <div>
+                <strong>WhatsApp</strong>
+                <p>(xx) 9 xxxx-xxxx</p>
+            </div>
+        </div>
+        <div class="contato-item">
+            <span class="icone">📸</span>
+            <div>
+                <strong>Instagram</strong>
+                <p>@bratzinstalacoes</p>
+            </div>
+        </div>
+        <div class="contato-item">
+            <span class="icone">📍</span>
+            <div>
+                <strong>Cidade</strong>
+                <p>Curitiba – PR</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contato-form">
+        <h2>Mande uma mensagem</h2>
+
+        <div class="form-grupo">
+            <label>Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="form-grupo">
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com">
+        </div>
+        <div class="form-grupo">
+            <label>Telefone</label>
+            <input type="text" id="telefone" placeholder="(xx) 9 xxxx-xxxx">
+        </div>
+        <div class="form-grupo">
+            <label>Mensagem</label>
+            <textarea id="mensagem" rows="4" placeholder="Descreva o que você precisa..."></textarea>
+        </div>
+
+        <button class="btn-enviar" onclick="enviar()">Enviar pelo WhatsApp</button>
+    </div>
+
+</div>
+
+<footer>
+    <strong>BRATZ INSTALAÇÕES 2026 — DAVID ANTÔNIO KLEIN BRATZ & HENRIQUE DA SILVA DE PAULA</strong>
+</footer>
+
+<script>
+    function enviar() {
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+
+        if (!nome || !mensagem) {
+            alert('Preencha pelo menos nome e mensagem.');
+            return;
+        }
+
+        // ALTERE O NÚMERO DO WHATSAPP (só números: DDI + DDD + número)
+        const numero = '5541999999999';
+        const texto = `Olá! Sou ${nome}.%0ATelefone: ${telefone}%0AE-mail: ${email}%0AMensagem: ${mensagem}`;
+        window.open(`https://wa.me/${numero}?text=${texto}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
