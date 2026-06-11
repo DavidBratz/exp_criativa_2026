@@ -214,6 +214,13 @@ nav a.ativo {
     color: #666;
     line-height: 1.6;
 }
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
 
 .depoimentos {
     display: flex;
