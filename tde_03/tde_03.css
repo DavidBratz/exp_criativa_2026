@@ -84,8 +84,9 @@ nav a.ativo {
    Imagem recomendada: 1920x500px
    Troque banner.jpg pelo seu arquivo */
 .banner {
-    background: #222 url('banner.jpg') center/cover no-repeat;
-    min-height: 400px;
+    background: url('img/banner_resized.jpg') center center no-repeat;
+    background-size: 100%;
+    height: 400px;
     display: flex;
     align-items: center;
     padding: 60px 80px;
