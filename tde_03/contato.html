@@ -9,9 +9,9 @@
 <body>
 
 <div class="top-bar">
-    <span>📧 contato@bratzinstalacoes.com.br</span>
-    <span>📱 (xx) 9 xxxx-xxxx</span>
-    <span>📸 bratzinstalacoes</span>
+    <span>📧 contato.bratzinstalacoes@gmail.com</span>
+    <span>📱 (55) 91234-5678</span>
+    <span>📸 @bratzinstalacoes</span>
 </div>
 
 <header>
@@ -28,41 +28,41 @@
 
 <div class="titulo-pagina">
     <h1>Contato</h1>
-    <p>Fale conosco, respondemos rápido!</p>
+    <p>Fale conosco , e deixa sua mensagem descrevendo o serviço que necessita !!!</p>
 </div>
 
 <div class="contato">
 
     <div class="contato-info">
-        <h2>Informações</h2>
+        <h2>Informações para contato</h2>
 
         <!-- ALTERE OS DADOS ABAIXO -->
         <div class="contato-item">
             <span class="icone">📧</span>
             <div>
-                <strong>E-mail</strong>
-                <p>contato@bratzinstalacoes.com.br</p>
+                <strong> Nosso E-mail</strong>
+                <p>contato.bratzinstalacoes@gmail.com</p>
             </div>
         </div>
         <div class="contato-item">
             <span class="icone">📱</span>
             <div>
-                <strong>WhatsApp</strong>
-                <p>(xx) 9 xxxx-xxxx</p>
+                <strong> Nosso WhatsApp</strong>
+                <p>(55) 91234-5678</p>
             </div>
         </div>
         <div class="contato-item">
             <span class="icone">📸</span>
             <div>
-                <strong>Instagram</strong>
+                <strong> Nosso Instagram</strong>
                 <p>@bratzinstalacoes</p>
             </div>
         </div>
         <div class="contato-item">
             <span class="icone">📍</span>
             <div>
-                <strong>Cidade</strong>
-                <p>Curitiba – PR</p>
+                <strong>Nossa Zona de atuação</strong>
+                <p>Porto Xavier e região - RS</p>
             </div>
         </div>
     </div>
@@ -95,25 +95,6 @@
 <footer>
     <strong>BRATZ INSTALAÇÕES 2026 — DAVID ANTÔNIO KLEIN BRATZ & HENRIQUE DA SILVA DE PAULA</strong>
 </footer>
-
-<script>
-    function enviar() {
-        const nome = document.getElementById('nome').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const telefone = document.getElementById('telefone').value.trim();
-        const mensagem = document.getElementById('mensagem').value.trim();
-
-        if (!nome || !mensagem) {
-            alert('Preencha pelo menos nome e mensagem.');
-            return;
-        }
-
-        // ALTERE O NÚMERO DO WHATSAPP (só números: DDI + DDD + número)
-        const numero = '5541999999999';
-        const texto = `Olá! Sou ${nome}.%0ATelefone: ${telefone}%0AE-mail: ${email}%0AMensagem: ${mensagem}`;
-        window.open(`https://wa.me/${numero}?text=${texto}`, '_blank');
-    }
-</script>
 
 </body>
 </html>

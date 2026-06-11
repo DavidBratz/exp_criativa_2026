@@ -272,9 +272,6 @@ nav a.ativo {
     font-size: 13px;
 }
 
-/* ---- QUEM SOMOS ----
-   Foto da equipe recomendada: 600x400px
-   Troque equipe.jpg pelo seu arquivo */
 .quemsomos {
     display: flex;
     gap: 50px;
@@ -291,7 +288,7 @@ nav a.ativo {
 
 .quemsomos-texto p {
     font-size: 15px;
-    color: #555;
+    color: #020202;
     line-height: 1.7;
     margin-bottom: 12px;
 }
